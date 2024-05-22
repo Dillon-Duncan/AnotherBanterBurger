@@ -1,0 +1,54 @@
+﻿@model BanterBurger.Models.Burger
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="mb-4">Burger Details</h1>
+
+<div class="container">
+    <div class="row shadow rounded">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h3 class="fw-bold mb-3"> @Html.DisplayFor(model => model.Name) </h3>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bun)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bun)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Patty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Patty)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Condiments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Condiments)
+        </dd>
+    </dl>
+</div>
+        <div class="col-sm-8 col-md-4 col-lg-2 col-xl-2">
+            <img src="https://cdn.openart.ai/uploads/image_aX0_5_te_1710071546120_512.webp" alt="Beef Burger" height="200px">
+        </div>
+</div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
